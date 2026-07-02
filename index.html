@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFNSV GROOMING</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    width:380px;
+    background:#1d1d1d;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+h1{
+    margin-bottom:10px;
+}
+
+.social{
+    margin:25px 0;
+}
+
+.qr{
+    width:150px;
+    height:150px;
+    margin:15px auto;
+    background:white;
+    padding:10px;
+    border-radius:12px;
+}
+
+a{
+    display:inline-block;
+    margin-top:10px;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:10px;
+    background:#2b7cff;
+}
+
+a:hover{
+    background:#155fe6;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<h1>AFNSV GROOMING</h1>
+<p>Выберите удобную социальную сеть</p>
+
+<div class="social">
+<h3>Telegram</h3>
+<div id="telegram" class="qr"></div>
+<a href="https://t.me/afnsv_groomer" target="_blank">Открыть Telegram</a>
+</div>
+
+<div class="social">
+<h3>MAX</h3>
+<div id="max" class="qr"></div>
+<a href="https://max.ru/join/fhSvV3JjIXZcLJlG4hzSF94cWSDr1qRFjSiOcURNSzc" target="_blank">Открыть MAX</a>
+</div>
+
+<div class="social">
+<h3>Instagram</h3>
+<div id="instagram" class="qr"></div>
+<a href="https://www.instagram.com/afnsv.grooming_64?igsh=OWc0azlyazRjZGF2&utm_source=ig_contact_invite" target="_blank">Открыть Instagram</a>
+</div>
+
+</div>
+
+<script>
+new QRCode(document.getElementById("telegram"), {
+text:"https://t.me/afnsv_groomer",
+width:130,
+height:130
+});
+
+new QRCode(document.getElementById("max"), {
+text:"https://max.ru/join/fhSvV3JjIXZcLJlG4hzSF94cWSDr1qRFjSiOcURNSzc",
+width:130,
+height:130
+});
+
+new QRCode(document.getElementById("instagram"), {
+text:"https://www.instagram.com/afnsv.grooming_64?igsh=OWc0azlyazRjZGF2&utm_source=ig_contact_invite",
+width:130,
+height:130
+});
+</script>
+
+</body>
+</html>
