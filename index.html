@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AFNSV GROOMING</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
 <style>
 body{
     margin:0;
@@ -20,92 +18,64 @@ body{
 }
 
 .card{
-    width:380px;
-    background:#1d1d1d;
+    width:350px;
+    background:#222;
     padding:30px;
     border-radius:20px;
     text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,.5);
+    box-shadow:0 0 20px rgba(0,0,0,.4);
 }
 
 h1{
     margin-bottom:10px;
 }
 
-.social{
-    margin:25px 0;
-}
-
-.qr{
-    width:150px;
-    height:150px;
-    margin:15px auto;
-    background:white;
-    padding:10px;
-    border-radius:12px;
+p{
+    color:#bbb;
 }
 
 a{
-    display:inline-block;
-    margin-top:10px;
-    color:white;
+    display:block;
     text-decoration:none;
-    padding:12px 20px;
-    border-radius:10px;
-    background:#2b7cff;
+    color:white;
+    padding:15px;
+    margin-top:15px;
+    border-radius:12px;
+    font-size:18px;
+    transition:0.2s;
 }
 
+.telegram{background:#229ED9;}
+.max{background:#6C63FF;}
+.instagram{background:#E1306C;}
+
 a:hover{
-    background:#155fe6;
+    opacity:.9;
 }
 </style>
 </head>
+
 <body>
 
 <div class="card">
 
 <h1>AFNSV GROOMING</h1>
-<p>Выберите удобную социальную сеть</p>
 
-<div class="social">
-<h3>Telegram</h3>
-<div id="telegram" class="qr"></div>
-<a href="https://t.me/afnsv_groomer" target="_blank">Открыть Telegram</a>
-</div>
+<p>Выберите социальную сеть</p>
 
-<div class="social">
-<h3>MAX</h3>
-<div id="max" class="qr"></div>
-<a href="https://max.ru/join/fhSvV3JjIXZcLJlG4hzSF94cWSDr1qRFjSiOcURNSzc" target="_blank">Открыть MAX</a>
-</div>
+<a class="telegram" href="https://t.me/afnsv_groomer" target="_blank">
+📱 Telegram
+</a>
 
-<div class="social">
-<h3>Instagram</h3>
-<div id="instagram" class="qr"></div>
-<a href="https://www.instagram.com/afnsv.grooming_64?igsh=OWc0azlyazRjZGF2&utm_source=ig_contact_invite" target="_blank">Открыть Instagram</a>
-</div>
+<a class="max" href="https://max.ru/join/fhSvV3JjIXZcLJlG4hzSF94cWSDr1qRFjSiOcURNSzc" target="_blank">
+💬 MAX
+</a>
+
+<a class="instagram" href="https://www.instagram.com/afnsv.grooming_64?igsh=OWc0azlyazRjZGF2&utm_source=ig_contact_invite" target="_blank">
+📷 Instagram
+</a>
 
 </div>
-
-<script>
-new QRCode(document.getElementById("telegram"), {
-text:"https://t.me/afnsv_groomer",
-width:130,
-height:130
-});
-
-new QRCode(document.getElementById("max"), {
-text:"https://max.ru/join/fhSvV3JjIXZcLJlG4hzSF94cWSDr1qRFjSiOcURNSzc",
-width:130,
-height:130
-});
-
-new QRCode(document.getElementById("instagram"), {
-text:"https://www.instagram.com/afnsv.grooming_64?igsh=OWc0azlyazRjZGF2&utm_source=ig_contact_invite",
-width:130,
-height:130
-});
-</script>
 
 </body>
 </html>
