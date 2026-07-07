@@ -3,77 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AFNSV GROOMING</title>
+
+<title>AFNV GROOMING</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#111;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+
+background:
+radial-gradient(circle at top,#2b2b2b,#111 55%,#000);
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:25px;
+
+color:white;
+
 }
 
 .card{
-    width:350px;
-    background:#222;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,.4);
+
+width:100%;
+max-width:420px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:30px;
+
+padding:40px 30px;
+
+text-align:center;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.45);
+
+animation:show .8s ease;
+
+}
+
+@keyframes show{
+
+from{
+
+opacity:0;
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.logo{
+
+width:190px;
+
+margin:auto;
+display:block;
+
+filter:
+drop-shadow(0 0 20px rgba(255,153,51,.35));
+
 }
 
 h1{
-    margin-bottom:10px;
+
+margin-top:20px;
+
+font-size:32px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
 }
 
-p{
-    color:#bbb;
+.subtitle{
+
+margin-top:12px;
+
+font-size:15px;
+
+color:#cccccc;
+
+line-height:24px;
+
 }
 
-a{
-    display:block;
-    text-decoration:none;
-    color:white;
-    padding:15px;
-    margin-top:15px;
-    border-radius:12px;
-    font-size:18px;
-    transition:0.2s;
+.line{
+
+margin:30px auto;
+
+width:70px;
+height:3px;
+
+background:#ff8a1d;
+
+border-radius:50px;
+
 }
 
-.telegram{background:#229ED9;}
-.max{background:#6C63FF;}
-.instagram{background:#E1306C;}
+.btn{
 
-a:hover{
-    opacity:.9;
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+text-decoration:none;
+
+padding:17px;
+
+border-radius:18px;
+
+font-size:17px;
+
+font-weight:600;
+
+color:white;
+
+margin-bottom:16px;
+
+transition:.25s;
+
 }
+
+.btn:hover{
+
+transform:translateY(-3px) scale(1.02);
+
+}
+
+.telegram{
+
+background:#229ED9;
+
+}
+
+.max{
+
+background:#6f59ff;
+
+}
+
+.instagram{
+
+background:linear-gradient(45deg,#ff5f6d,#ff8a00);
+
+}
+
+.footer{
+
+margin-top:28px;
+
+font-size:13px;
+
+color:#999;
+
+line-height:22px;
+
+}
+
+.heart{
+
+color:#ff8a1d;
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="card">
 
-<h1>AFNSV GROOMING</h1>
+<img src="logo.png" class="logo">
 
-<p>Выберите социальную сеть</p>
+<h1>AFNV GROOMING</h1>
 
-<a class="telegram" href="https://t.me/afnsv_groomer" target="_blank">
+<div class="subtitle">
+
+Профессиональный груминг<br>
+с любовью к каждому питомцу
+
+</div>
+
+<div class="line"></div>
+
+<a class="btn telegram"
+href="https://t.me/afnsv_groomer"
+target="_blank">
+
 📱 Telegram
+
 </a>
 
-<a class="max" href="https://max.ru/join/fhSvV3JjIXZcLJlG4hzSF94cWSDr1qRFjSiOcURNSzc" target="_blank">
+<a class="btn max"
+href="https://max.ru/join/fhSvV3JjIXZcLJlG4hzSF94cWSDr1qRFjSiOcURNSzc"
+target="_blank">
+
 💬 MAX
+
 </a>
 
-<a class="instagram" href="https://www.instagram.com/afnsv.grooming_64?igsh=OWc0azlyazRjZGF2&utm_source=ig_contact_invite" target="_blank">
+<a class="btn instagram"
+href="https://www.instagram.com/afnsv.grooming_64?igsh=OWc0azlyazRjZGF2&utm_source=ig_contact_invite"
+target="_blank">
+
 📷 Instagram
+
 </a>
+
+<div class="footer">
+
+Спасибо за доверие<br>
+
+<span class="heart">❤</span>
+
+</div>
 
 </div>
 
