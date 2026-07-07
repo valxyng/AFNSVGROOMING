@@ -1,1 +1,635 @@
+/* ==========================
+   AFNSV GROOMING
+   Premium Style
+========================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Montserrat',sans-serif;
+
+color:white;
+
+background:#000;
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+}
+
+/* ---------- Живой фон ---------- */
+
+.background{
+
+position:fixed;
+
+inset:0;
+
+z-index:-3;
+
+background:
+
+radial-gradient(circle at 50% 0%,
+rgba(255,170,60,.18),
+transparent 40%),
+
+radial-gradient(circle at 20% 80%,
+rgba(255,255,255,.04),
+transparent 45%),
+
+linear-gradient(180deg,
+#2a2015,
+#101010 45%,
+#000);
+
+animation:bgMove 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+/* ---------- Золотые частицы ---------- */
+
+.background::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(circle,
+rgba(255,210,120,.4) 1px,
+transparent 1px);
+
+background-size:120px 120px;
+
+opacity:.4;
+
+animation:particles 25s linear infinite;
+
+}
+
+@keyframes particles{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120px);
+
+}
+
+}
+
+/* ---------- Карточка ---------- */
+
+.card{
+
+position:relative;
+
+width:100%;
+
+max-width:560px;
+
+padding:50px 35px;
+
+border-radius:36px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(26px);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:
+
+0 35px 80px rgba(0,0,0,.55);
+
+overflow:hidden;
+
+animation:cardShow .9s ease;
+
+}
+
+@keyframes cardShow{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(50px)
+
+scale(.94);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+}
+
+/* ---------- Блик ---------- */
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-250px;
+
+left:-180px;
+
+width:220px;
+
+height:900px;
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,.16),
+
+transparent
+
+);
+
+transform:rotate(25deg);
+
+animation:shine 8s infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-250px;
+
+}
+
+100%{
+
+left:700px;
+
+}
+
+}
+
+/* ---------- Логотип ---------- */
+
+.logo{
+
+display:block;
+
+width:100%;
+
+max-width:430px;
+
+margin:auto;
+
+filter:
+
+drop-shadow(0 0 18px rgba(255,180,70,.7))
+
+drop-shadow(0 0 55px rgba(255,140,0,.45));
+
+transition:.4s;
+
+animation:logoShow 1s ease;
+
+}
+
+.logo:hover{
+
+transform:scale(1.04);
+
+filter:
+
+drop-shadow(0 0 30px rgba(255,220,120,1))
+
+drop-shadow(0 0 90px rgba(255,160,0,.8));
+
+}
+
+@keyframes logoShow{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(-20px)
+
+scale(.85);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+}
+
+/* ---------- Заголовки ---------- */
+
+h1{
+
+text-align:center;
+
+margin-top:20px;
+
+font-size:42px;
+
+letter-spacing:5px;
+
+font-weight:700;
+
+}
+
+.subtitle{
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:17px;
+
+line-height:30px;
+
+color:#d5d5d5;
+
+}
+
+.divider{
+
+width:90px;
+
+height:4px;
+
+margin:35px auto;
+
+border-radius:30px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#ffd86b,
+
+#ff9f2e,
+
+#ffd86b);
+
+box-shadow:
+
+0 0 18px rgba(255,180,60,.8);
+
+}
+
+/* ---------- Телефон ---------- */
+
+@media(max-width:600px){
+
+body{
+
+padding:15px;
+
+}
+
+.card{
+
+padding:35px 22px;
+
+}
+
+.logo{
+
+max-width:330px;
+
+}
+
+h1{
+
+font-size:31px;
+
+letter-spacing:2px;
+
+}
+
+.subtitle{
+
+font-size:15px;
+
+line-height:26px;
+
+}
+
+}
+/* ===================================
+   СОЦИАЛЬНЫЕ КНОПКИ
+=================================== */
+
+.socials{
+display:flex;
+flex-direction:column;
+gap:18px;
+margin-bottom:45px;
+}
+
+.btn{
+
+position:relative;
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+
+height:72px;
+
+text-decoration:none;
+
+font-size:20px;
+font-weight:600;
+
+color:white;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+overflow:hidden;
+
+transition:.35s;
+
+}
+
+/* Световой блик */
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent);
+
+transition:.8s;
+
+}
+
+.btn:hover::before{
+
+left:150%;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.telegram:hover{
+
+background:#229ED9;
+
+}
+
+.max:hover{
+
+background:#6d5dff;
+
+}
+
+.instagram:hover{
+
+background:
+linear-gradient(
+45deg,
+#ff4b74,
+#ff9825);
+
+}
+
+/* ===================================
+   SVG ИКОНКИ
+=================================== */
+
+.btn svg{
+
+width:28px;
+
+height:28px;
+
+fill:white;
+
+flex-shrink:0;
+
+}
+
+/* ===================================
+   ГАЛЕРЕЯ
+=================================== */
+
+.gallery{
+
+margin-top:15px;
+
+}
+
+.gallery h2{
+
+text-align:center;
+
+font-size:28px;
+
+margin-bottom:25px;
+
+letter-spacing:2px;
+
+}
+
+.photos{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.photos img{
+
+width:100%;
+
+aspect-ratio:1/1;
+
+object-fit:cover;
+
+border-radius:22px;
+
+cursor:pointer;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.photos img:hover{
+
+transform:
+
+scale(1.05);
+
+box-shadow:
+
+0 20px 45px rgba(255,170,60,.35);
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+
+margin-top:40px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#bfbfbf;
+
+letter-spacing:1px;
+
+}
+
+/* ===================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+=================================== */
+
+@media(max-width:600px){
+
+.btn{
+
+height:65px;
+
+font-size:18px;
+
+}
+
+.gallery h2{
+
+font-size:24px;
+
+}
+
+.photos{
+
+grid-template-columns:1fr;
+
+}
+
+.photos img{
+
+height:260px;
+
+}
+
+}
